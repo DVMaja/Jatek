@@ -13,6 +13,7 @@ public class Karakter {
         this.eletero = dobas() + dobas() + 12;
         this.ugyesseg = dobas() + 6;
         this.szerencse = dobas() + 6;
+        felszereles = new ArrayList<>();
 
     }
 

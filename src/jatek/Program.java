@@ -16,7 +16,7 @@ public class Program {
         k1.felvesz(t2);
         k1.felvesz(t3, 3);
         
-        k1.hasznal("alma");
+        //k1.hasznal("alma");
     }
 
 }

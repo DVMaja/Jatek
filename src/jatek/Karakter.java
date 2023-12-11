@@ -4,6 +4,8 @@
  */
 package jatek;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author dreilinger.v.maja
@@ -11,6 +13,6 @@ package jatek;
 public class Karakter {
 
     private int eletero, ugyesseg, szerencse;
-    private String felszereles;
+    private ArrayList<String> felszereles; //String lista
 
 }

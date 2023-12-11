@@ -10,15 +10,14 @@ public class Karakter {
     private Random rnd = new Random();
 
     public Karakter() {
-        //r.nextInt(high-low) + 1;
         this.eletero = dobas() + dobas() + 12;
         this.ugyesseg = dobas() + 6;
         this.szerencse = dobas() + 6;
-        felszereles = new ArrayList<>();
+
     }
 
     public void felvesz(Targy targy) {
-        felszereles.add(targy);
+        felvesz(targy, 1);
     }
 
     public void felvesz(Targy targy, int db) {
@@ -42,6 +41,21 @@ public class Karakter {
     public int getSzerencse() {
         return szerencse;
     }
-    
+
+    public void hasznal(String nev) {
+        for (Targy f : felszereles) {
+            if (nev.equals(f.getNev())) {
+                felszereles.remove(f);
+            }
+        }
+    }
+
+    public void hasznal(String nev, int db) {
+        hasznal(nev);
+    }
+
+    public void hasznal(String nev, int db, boolean eleg) {
+        hasznal(nev, db);
+    }
 
 }

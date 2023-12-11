@@ -43,20 +43,66 @@ public class Karakter {
         return szerencse;
     }
 
+    public ArrayList<Targy> getFelszereles() {//törlendő
+        return felszereles;
+    }
+
     public void hasznal(String nev) {
-        for (Targy f : felszereles) {
-            if (nev.equals(f.getNev())) {
-                felszereles.remove(f);
-            }
-        }
+        hasznal(nev, eletero, true);
+
     }
 
     public void hasznal(String nev, int db) {
-        hasznal(nev);
+        hasznal(nev, db, true);
+
     }
 
-    public void hasznal(String nev, int db, boolean eleg) {
-        hasznal(nev, db);
+    public void hasznal(String nev, int db, boolean levon) {//MÉG ROSSZ
+        int dbSzam = 0;
+        ArrayList<Targy> torlendo = new ArrayList<>();
+        //kigyüjtöm az indexeket, és késöbb megmondom hogy hol töröljön
+        //bejárás közben nem lehet removolni, 
+        //külön methodusba kirakjuk a találtakat, és majd ezt adjuk vissza
+
+        boolean kiveheto = false;
+        for (Targy f : felszereles) {
+            if (nev.equals(f.getNev())) {
+                dbSzam++;
+                if (dbSzam == db && levon) {
+                    kiveheto = true;
+                    torlendo.add(f);
+                    felszereles.remove(f);
+                    //System.out.println(torlendo);
+                    //System.out.println("Elég db");
+                }
+            }
+        }
+        if (kiveheto) {
+            for (int i = 0; i < db; i++) {
+                //felszereles.remove(torlendo.get(i).getNev());
+            }
+        }
+
+    }
+
+//    private void talaltTargyak() {
+//    }
+//
+//    private boolean van() {
+//        return true;
+//    }
+
+    private String felszFormazas() { // esetleg kiírni hogy  mennyi db ahelyett hogy mindent kiírunk
+        String formazott = "\nFelszerelés: \n";
+        for (Targy f : felszereles) {
+            formazott += "\tNeve: " + f.getNev() + "\t Leírás: " + f.getLeiras() + "\n";
+        }
+        return formazott;
+    }
+
+    @Override
+    public String toString() {
+        return "Karakter{" + "eletero=" + eletero + ", ugyesseg=" + ugyesseg + ", szerencse=" + szerencse + felszFormazas() + '}';
     }
 
 }

@@ -1,18 +1,20 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package jatek;
 
 import java.util.ArrayList;
 
-/**
- *
- * @author dreilinger.v.maja
- */
 public class Karakter {
 
     private int eletero, ugyesseg, szerencse;
-    private ArrayList<String> felszereles; //String lista
+    private ArrayList<Targy> felszereles; //String lista
+
+    public void felvesz(Targy targy) {
+        felszereles.add(targy);
+    }
+
+    public void felvesz(Targy targy, int db) {
+        for (int i = 0; i < db; i++) {
+            felszereles.add(targy);
+        }
+    }
 
 }

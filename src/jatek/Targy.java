@@ -13,4 +13,16 @@ public class Targy {
         id = UUID.randomUUID();
     }
 
+    public String getNev() {
+        return nev;
+    }
+
+    public String getLeiras() {
+        return leiras;
+    }
+
+    public UUID getId() {
+        return id;
+    }
+
 }

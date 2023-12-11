@@ -7,13 +7,14 @@ public class Karakter {
 
     private int eletero, ugyesseg, szerencse;
     private ArrayList<Targy> felszereles; //String lista
-    Random rnd = new Random();
+    private Random rnd = new Random();
 
     public Karakter() {
-        //r.nextInt(high-low) + low;
-        this.eletero = (rnd.nextInt(1, 7) * 2) + 12;
-        this.ugyesseg = rnd.nextInt(1, 7) + 6;
-        this.szerencse = rnd.nextInt(1, 7) + 6;
+        //r.nextInt(high-low) + 1;
+        this.eletero = dobas() + dobas() + 12;
+        this.ugyesseg = dobas() + 6;
+        this.szerencse = dobas() + 6;
+        felszereles = new ArrayList<>();
     }
 
     public void felvesz(Targy targy) {
@@ -25,5 +26,22 @@ public class Karakter {
             felszereles.add(targy);
         }
     }
+
+    private int dobas() { //also, felso
+        return rnd.nextInt(1, 6) + 1;
+    }
+
+    public int getEletero() {
+        return eletero;
+    }
+
+    public int getUgyesseg() {
+        return ugyesseg;
+    }
+
+    public int getSzerencse() {
+        return szerencse;
+    }
+    
 
 }

@@ -9,5 +9,5 @@ package jatek;
  * @author dreilinger.v.maja
  */
 public class Jatek {
-    
+
 }

@@ -1,9 +1,10 @@
 package jatek;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Random;
 
-public class Karakter {
+public class Karakter implements Serializable {
 
     private int eletero, ugyesseg, szerencse;
     private ArrayList<Targy> felszereles; //String lista
@@ -91,7 +92,6 @@ public class Karakter {
 //    private boolean van() {
 //        return true;
 //    }
-
     private String felszFormazas() { // esetleg kiírni hogy  mennyi db ahelyett hogy mindent kiírunk
         String formazott = "\nFelszerelés: \n";
         for (Targy f : felszereles) {

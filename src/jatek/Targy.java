@@ -1,8 +1,9 @@
 package jatek;
 
+import java.io.Serializable;
 import java.util.UUID;
 
-public class Targy {
+public class Targy implements Serializable {
 
     private String nev, leiras;
     private UUID id;

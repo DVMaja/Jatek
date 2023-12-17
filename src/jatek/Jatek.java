@@ -25,7 +25,7 @@ public class Jatek {
         k1.hasznal("kard", 2, true);
         System.out.println("k1: " + k1.toString());
         //Mentsd el a jelenlegi játék állást
-        mentes(k1);
+        //mentes(k1);
         //k1 = null;
         //System.out.println("k1: " + k1.toString());
     }

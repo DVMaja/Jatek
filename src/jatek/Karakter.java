@@ -50,12 +50,10 @@ public class Karakter implements Serializable {
 
     public void hasznal(String nev) {
         hasznal(nev, eletero, true);
-
     }
 
     public void hasznal(String nev, int db) {
         hasznal(nev, db, true);
-
     }
 
     public void hasznal(String nev, int db, boolean levon) {
@@ -65,7 +63,7 @@ public class Karakter implements Serializable {
         //bejárás közben nem lehet removolni, 
         //külön methodusba kirakjuk a találtakat, és majd ezt adjuk vissza
 
-        for (int i = 0; i < felszereles.size(); i++) {
+        for (int i = felszereles.size() - 1; i >= 0; i--) { //visszafelé kell bepakoni hogy ne változtassunk a sorrenden
             Targy f = felszereles.get(i);
 
             if (nev.equals(f.getNev())) {

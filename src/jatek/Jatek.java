@@ -22,9 +22,9 @@ public class Jatek {
         System.out.println("k1: " + k1.toString());
         //System.out.println(k1.getFelszereles());
 
-        k1.hasznal("kard", 2, true);
+        k1.hasznal("kard", 1, true);
         System.out.println("k1: " + k1.toString());
-        //Mentsd el a jelenlegi játék állást
+
         //mentes(k1);
         //k1 = null;
         //System.out.println("k1: " + k1.toString());

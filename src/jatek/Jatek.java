@@ -24,9 +24,8 @@ public class Jatek {
         k1.felvesz(t4, 8);
 
         System.out.println("k1: " + k1.toString());
-        //System.out.println(k1.getFelszereles());
 
-        k1.hasznal("kard", 1, true);
+        k1.hasznal("kard", 4, true);
         System.out.println("k1: " + k1.toString());
 
         mentes(k1);

@@ -15,7 +15,6 @@ public class Karakter implements Serializable {
         this.ugyesseg = dobas() + 6;
         this.szerencse = dobas() + 6;
         felszereles = new ArrayList<>();
-
     }
 
     public void felvesz(Targy targy) {
@@ -74,7 +73,6 @@ public class Karakter implements Serializable {
                 }
             }
         }
-
         if (!torlendoIndexek.isEmpty()) {
             for (int i : torlendoIndexek) {
                 felszereles.remove(i);
@@ -82,12 +80,6 @@ public class Karakter implements Serializable {
         }
     }
 
-//    private void talaltTargyak() {
-//    }
-//
-//    private boolean van() {
-//        return true;
-//    }
     private String felszFormazas() { // esetleg kiírni hogy  mennyi db ahelyett hogy mindent kiírunk
         String formazott = "\nFelszerelés: \n";
         for (Targy f : felszereles) {

@@ -53,9 +53,10 @@ van()
 melyik()
 2 ág main, karakter ág 
 karakter:
-- tárgyak felvétel név leírás id
-- felvétel tulterhelés, 1db vagy több
-- használat 3 tulter
+- tárgyak felvétel név leírás id //megvan
+- felvétel tulterhelés, 1db vagy több //megvan
+- használat 3 tulter //megvan
+- mentés beolvasás //megvan
 
 	1db valahány és tud úgy hogy nincs nála elegendő
 	kihuzni a listából

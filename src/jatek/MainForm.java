@@ -10,17 +10,19 @@ package jatek;
  */
 public class MainForm extends javax.swing.JFrame {
 
+    private Helyszin helyszin;
+
     /**
      * Creates new form MainForm
      */
     public MainForm() {
         initComponents();
 
-        Helyszin helyszin = new Start();
-        jTextArea1.setText(helyszin.leiras());
+        helyszin = new Start();
+        jTextArea1.insert(helyszin.leiras() + "\n", 0);
         //grafikus felületet ne szerkesze két ember, mert lehet baj vele
         jButton1.setVisible(false);
-        jButton2.setText("Tovább");
+        jButton2.setText(helyszin.egyikBtnFelirat());
 
     }
 
@@ -48,6 +50,11 @@ public class MainForm extends javax.swing.JFrame {
         jScrollPane1.setViewportView(jTextArea1);
 
         jButton1.setText("Egyik irány");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         jButton2.setText("Másik irány");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -87,14 +94,18 @@ public class MainForm extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // TODO add your handling code here:
-        /*Ez itt az egyik írány*
-        ez itt a naíve leírás
-        */
-        Helyszin helyszin = new Kezdes();
-        jTextArea1.setText(helyszin.leiras());
-        //innen jöhetne a sok egymásba ágyazott if
+        // TODO add your handling code here:    
+
+        helyszin = helyszin.egyikIrany();
+        jTextArea1.insert(helyszin.leiras() + "\n", 0);        
+        jTextArea1.setCaretPosition(0);
+        jButton2.setText(helyszin.egyikBtnFelirat());
+
     }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments

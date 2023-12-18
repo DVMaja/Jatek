@@ -1,21 +1,23 @@
 package jatek;
 
-public class Balra extends Helyszin {
+public class Jobbra extends Helyszin {
+
+    public Jobbra() {
+    }
 
     @Override
     public String leiras() {
-        return "Ez balra van";
+        return "Ez a jobb irány";
     }
 
     @Override
     public String egyikBtnFelirat() {
-        return "Északra";
+        return "...";
     }
 
     @Override
     public Helyszin egyikIrany() {
-        return new Balra();
-
+        return new Jobbra();
     }
 
 }

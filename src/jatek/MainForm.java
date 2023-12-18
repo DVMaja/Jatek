@@ -11,6 +11,7 @@ package jatek;
 public class MainForm extends javax.swing.JFrame {
 
     private Helyszin helyszin;
+    private MasikIrany masik;
 
     /**
      * Creates new form MainForm
@@ -19,9 +20,10 @@ public class MainForm extends javax.swing.JFrame {
         initComponents();
 
         helyszin = new Start();
+        masik = new Kezdes();
         jTextArea1.insert(helyszin.leiras() + "\n", 0);
         //grafikus felületet ne szerkesze két ember, mert lehet baj vele
-        
+
         if (helyszin instanceof MasikIrany) {
             jButton1.setVisible(true);
         } else {
@@ -105,6 +107,7 @@ public class MainForm extends javax.swing.JFrame {
         jTextArea1.insert(helyszin.leiras() + "\n", 0);
         jTextArea1.setCaretPosition(0);
         jButton2.setText(helyszin.egyikBtnFelirat());
+        jButton1.setText(masik.masikBtnFelirat());
 
         if (helyszin instanceof MasikIrany) {
             jButton1.setVisible(true);
@@ -116,10 +119,21 @@ public class MainForm extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-        helyszin = helyszin.egyikIrany();//ásik irány majd
+        masik = new Kezdes();
+
+        //helyszin = helyszin.masikIrany();
+        System.out.println(masik.masikBtnFelirat());
+        jButton1.setText(masik.masikBtnFelirat());
+
         jTextArea1.insert(helyszin.leiras() + "\n", 0);
         jTextArea1.setCaretPosition(0);
-        jButton2.setText(helyszin.egyikBtnFelirat());
+
+        if (helyszin instanceof MasikIrany) {
+            jButton1.setVisible(true);
+
+        } else {
+            jButton1.setVisible(false);
+        }
 
 
     }//GEN-LAST:event_jButton1ActionPerformed

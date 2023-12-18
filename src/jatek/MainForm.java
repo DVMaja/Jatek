@@ -21,7 +21,6 @@ public class MainForm extends javax.swing.JFrame {
         //grafikus felületet ne szerkesze két ember, mert lehet baj vele
         jButton1.setVisible(false);
         jButton2.setText("Tovább");
-        
 
     }
 
@@ -51,6 +50,11 @@ public class MainForm extends javax.swing.JFrame {
         jButton1.setText("Egyik irány");
 
         jButton2.setText("Másik irány");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -81,6 +85,16 @@ public class MainForm extends javax.swing.JFrame {
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+        /*Ez itt az egyik írány*
+        ez itt a naíve leírás
+        */
+        Helyszin helyszin = new Kezdes();
+        jTextArea1.setText(helyszin.leiras());
+        //innen jöhetne a sok egymásba ágyazott if
+    }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
      * @param args the command line arguments

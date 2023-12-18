@@ -1,6 +1,6 @@
 package jatek;
 
-public class Kezdes extends Helyszin {
+public class Kezdes extends Helyszin implements MasikIrany{
 
     @Override
     public String leiras() {

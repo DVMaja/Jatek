@@ -21,7 +21,12 @@ public class MainForm extends javax.swing.JFrame {
         helyszin = new Start();
         jTextArea1.insert(helyszin.leiras() + "\n", 0);
         //grafikus felületet ne szerkesze két ember, mert lehet baj vele
-        jButton1.setVisible(false);
+        
+        if (helyszin instanceof MasikIrany) {
+            jButton1.setVisible(true);
+        } else {
+            jButton1.setVisible(false);
+        }
         jButton2.setText(helyszin.egyikBtnFelirat());
 
     }
@@ -101,6 +106,12 @@ public class MainForm extends javax.swing.JFrame {
         jTextArea1.setCaretPosition(0);
         jButton2.setText(helyszin.egyikBtnFelirat());
 
+        if (helyszin instanceof MasikIrany) {
+            jButton1.setVisible(true);
+        } else {
+            jButton1.setVisible(false);
+        }
+
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
@@ -109,6 +120,8 @@ public class MainForm extends javax.swing.JFrame {
         jTextArea1.insert(helyszin.leiras() + "\n", 0);
         jTextArea1.setCaretPosition(0);
         jButton2.setText(helyszin.egyikBtnFelirat());
+
+
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**

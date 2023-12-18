@@ -4,12 +4,12 @@ public class Kezdes extends Helyszin {
 
     @Override
     public String leiras() {
-        return "Ez a Kezdés.";
+        return "Ez a Kezdés. Jobbra vagy Balra?";
     }
 
     @Override
     public Helyszin egyikIrany() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        return new Balra();
     }
 
     @Override

@@ -97,7 +97,7 @@ public class MainForm extends javax.swing.JFrame {
         // TODO add your handling code here:    
 
         helyszin = helyszin.egyikIrany();
-        jTextArea1.insert(helyszin.leiras() + "\n", 0);        
+        jTextArea1.insert(helyszin.leiras() + "\n", 0);
         jTextArea1.setCaretPosition(0);
         jButton2.setText(helyszin.egyikBtnFelirat());
 
@@ -105,6 +105,10 @@ public class MainForm extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
+        helyszin = helyszin.egyikIrany();//ásik irány majd
+        jTextArea1.insert(helyszin.leiras() + "\n", 0);
+        jTextArea1.setCaretPosition(0);
+        jButton2.setText(helyszin.egyikBtnFelirat());
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
